@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script>
+    function showContent(contentId) {
+      // Hide all content sections
+      const contentSections = document.getElementsByClassName("content-section");
+      for (let i = 0; i < contentSections.length; i++) {
+        contentSections[i].style.display = "none";
+      }
+
+      // Show the selected content section
+      const selectedContent = document.getElementById(contentId);
+      selectedContent.style.display = "block";
+    }
+      
+  </script>
+</head>
+<body>
+  <header>
+    <div class="image-container">
+      <img src="IBC.png" alt="IBC Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="about_us.html">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="#" onclick="showContent('overview-content')">Overview</a></li>
+            <li><a href="#" onclick="showContent('structure-content')">Structure</a></li>
+            <li><a href="#" onclick="showContent('faculty-content')">Faculty</a></li>
+            <li><a href="#" onclick="showContent('staff-content')">Staff</a></li>
+            <li><a href="#" onclick="showContent('affiliates-content')">Affiliates</a></li>
+            <li><a href="#" onclick="showContent('partners-content')">Partners</a></li>
+          </ul>
+        </li>
+        <li><a href="clinical_care.html">Clinical Care</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+      
+  </header>
+
+  <main>
+    <section id="main-button">
+      <h2>About Us</h2>
+      <div class="button-container">
+        <a class="content-button" href="#" onclick="showContent('overview-content')">Overview</a>
+        <a class="content-button" href="#" onclick="showContent('structure-content')">Structure</a>
+        <a class="content-button" href="#" onclick="showContent('faculty-content')">Faculty</a>
+        <a class="content-button" href="#" onclick="showContent('staff-content')">Staff</a>
+        <a class="content-button" href="#" onclick="showContent('affiliates-content')">Affiliates</a>
+        <a class="content-button" href="#" onclick="showContent('partners-content')">Partners</a>
+      </div>
+      
+      <div class="content-container">
+        <div class="content-section" id="overview-content">
+          <br>
+          <br>
+          <img src="pic.png" alt="Overview Image">
+        
+            <div class="text-aligned">
+            
+              <p><b>Mission</b></p>
+              <p>To support investigators in the discovery, development, and implementation of promising therapeutics and associated diagnostics for individuals with complex brain disorders that affect cognition, behavior, emotion, sensory and motor functioning.</p>
+              <p><b>Major disease interests</b></p>
+              <ul>
+                  <li>Neurocognitive disorders of aging: Alzheimer’s, frontotemporal, Lewy body, vascular ...</li>
+                  <li>Mood, anxiety and psychotic disorders ...</li>
+                  <li>Traumatic brain injury, epilepsy, multiple sclerosis ...</li>
+              </ul>
+              <p><b>Major Activities</b></p>
+              <ul>
+                  <li>Novel approaches to diagnosis, staging, tracking, therapeutic target engagement, therapeutic outcomes</li>
+                  <li>Proof-of-Concept and Phase 1b -> Phase 4, biomarker-intensive clinical treatment trials</li>
+              </ul>
+              <p><b>Major Plans</b></p>
+              <ul>
+                  <li>NIH, DARPA, Other Federal</li>
+                  <li>Biotech / Pharma sponsored research</li>
+                  <li>Local investment (e.g. MLSC), foundation and private philanthropy</li>
+              </ul>
+              <br>
+              <br>
+            
+            </div>
+
+          </div>
+        <div class="content-section" id="faculty-content">
+          <br>
+          <br>
+            
+          <div class="text-important">
+            <p>Oversight Committee</p>
+          </div>
+            
+            <div class="name-list">
+
+              <button onclick="toggleDetails('person1')">B. Hyman</button>
+              <p id="person1-details" class="person-details">Information about B. Hyman</p>
+
+              <button onclick="toggleDetails('person2')">D. Blacker</button>
+              <p id="person2-details" class="person-details">Information about D. Blacker</p>
+
+              <button onclick="toggleDetails('person3')">B. Rosen</button>
+              <p id="person3-details" class="person-details">Information about B. Rosen</p>
+                
+             <button onclick="toggleDetails('person4')">R. Weissleder</button>
+              <p id="person4-details" class="person-details">.</p>
+ 
+            </div>
+            
+            <br>
+            <br>
+            
+            
+         <div class="text-important">
+            <p>Executive Committee</p>
+          </div>
+            
+            <div class="name-list">
+
+              <button onclick="toggleDetails('person5')">S. Arnold (Managing Dir)</button>
+              <p id="person5-details" class="person-details">.</p>
+
+              <button onclick="toggleDetails('person6')">H. Dodge</button>
+              <p id="person6-details" class="person-details">.</p>
+
+              <button onclick="toggleDetails('person7')">J. Camprodon</button>
+              <p id="person7-details" class="person-details">.</p>
+                
+             <button onclick="toggleDetails('person8')">C. Maneiro</button>
+              <p id="person8-details" class="person-details">.</p>
+            
+                <button onclick="toggleDetails('person9')">B. Dickerson</button>
+              <p id="person9-details" class="person-details">.</p>
+                
+                <button onclick="toggleDetails('person10')">C. Wu</button>
+              <p id="person10-details" class="person-details">.</p>
+                
+                <button onclick="toggleDetails('person11')">D. Dougherty</button>
+              <p id="person11-details" class="person-details">.</p>
+                
+                <button onclick="toggleDetails('person12')">D. Salat</button>
+              <p id="person12-details" class="person-details">.</p>
+                 
+            </div>
+
+          <script>
+            function toggleDetails(person) {
+              var details = document.getElementById(person + '-details');
+              details.classList.toggle('show');
+            }
+
+          </script>
+            
+            <br>
+            <br>
+            
+        </div>
+          
+          <!-- Following is Structure content -->
+        <div class="content-section" id="structure-content">
+          <br>
+          <br>
+            
+          <div class="text-important">
+            <p>Oversight Committee</p>
+          </div>
+            
+          <table class="oversight-table">
+      
+              <tr>
+                <th>Neurology</th>
+                <th>Psychiatry</th>
+                <th>Radiology</th>
+              </tr>
+              <tr>
+                <td>B. Hyman</td>
+                <td>D. Blacker</td>
+                <td>B. Rosen</td> 
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td>R. Weissleder</td>
+              </tr>
+         </table>
+         <br>
+         <br>
+        <div class="line-container">
+          <img src="line.png" alt="Line Image" class="small-image">
+        </div>
+
+         <div class="text-important">
+            <p>Executive Committee</p>
+          </div>
+            
+          <table class="executive-table">
+              <tr>
+                <th>Neurology</th>
+                <th>Research Analytics</th>
+                <th>Psychiatry</th>
+                <th>Martinos</th>
+              </tr>
+              <tr>
+                <td>S. Arnold (Managing Dir)</td>
+                <td>H. Dodge</td>
+                <td>J. Camprodon</td> 
+                <td>C. Maneiro </td>
+              </tr>
+              <tr>
+                <td>B. Dickerson</td>
+                <td>C. Wu</td>
+                <td>D. Dougherty</td>
+                <td>D. Salat</td>
+              </tr>
+         </table>
+        <br>
+        <br>
+        <div class="line-container">
+          <img src="line.png" alt="Line Image" class="small-image">
+        </div>
+
+            
+         <div class="text-important">
+            <p>CTRU (Program Director J. Gerber)</p>
+          </div>
+            
+          <table class="program-table">
+              <tr>
+                <th>Administrative</th>
+                <th>Clinical</th>
+                <th>Technical</th>
+              </tr>
+              <tr>
+                <td>Admin Asst /Clerical</td>
+                <td>Physician</td>
+                <td>Clinical Research Coordinator</td> 
+              </tr>
+              <tr>
+                <td>Room/Activity Scheduling</td>
+                <td>Nurse Practitioner</td>
+                <td>Lab Processing / Biobanking</td> 
+              </tr>
+              <tr>
+                <td>Fiscal Coordinator</td>
+                <td>Nursing / Infusion</td>
+                <td>Image Acquisition</td> 
+              </tr>
+              <tr>
+                <td>Room/Equipment Maintenance</td>
+                <td>Medical Assistant</td>
+                <td>Digital Health / Wearables</td> 
+              </tr>
+              <tr>
+                <td>Web Maintenance</td>
+                <td>Pharmacy Technician</td>
+                <td>EEG</td> 
+              </tr>
+              <tr>
+                <td>Project Management</td>
+                <td>Psychometrician</td>
+                <td>TMS</td> 
+              </tr>
+         </table>
+            <br>
+            <br>
+        
+        </div>
+        
+        <div class="content-section" id="staff-content">
+          <!-- Leave this section empty for the Staff content -->
+        </div>
+        
+        <div class="content-section" id="affiliates-content">
+          <!-- Leave this section empty for the Affiliates content -->
+        </div>
+        
+        <div class="content-section" id="partners-content">
+          <br>
+          <br>
+          <div class="text-important">
+            <p>IBC Executive Committee</p>
+          </div>
+            
+          <table class="centered-table">
+              <tr>
+                <td>Steven E. Arnold</td>
+                <td>Joan A. Camprodon</td>
+                <td>Caterina Maneiro</td>
+                <td>Peter Caravan</td>
+              </tr>
+              <tr>
+                <td>Brad Dickerson</td>
+                <td>Darin D. Dougherty</td>
+                <td>David H. Salat</td>
+                <td>John W. Chen</td>
+              </tr>
+              <tr>
+                <td>Maisi Mayo (Admin)</td>
+                <td>Renee Langton (Admin)</td>
+                <td>David Vaughn (Admin)</td>
+                <td>Hiroko H. Dodge</td>
+              </tr>
+            </table>
+            <br>
+            <br>
+            
+            <img src="logos.png" alt="Logos Image">
+
+
+          <!-- Leave this section empty for the Partners content -->
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

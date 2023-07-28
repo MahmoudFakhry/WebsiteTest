@@ -89,16 +89,18 @@ table {
 }
 
 table.oversight-table td, table.oversight-table th {
-    padding-right: 175px; 
+    padding-right: 5vw;
+
 }
 
 table.executive-table td, table.executive-table th {
-    padding-right: 70px; 
+    padding-right: 2vw;
+
 }
 
 table.program-table td, table.program-table th {
-    padding-right: 90px; 
-    padding-left: 20px; 
+    padding-right: 2.25vw; 
+    padding-left: 0.5vw; 
 }
 
 table.centered-table td, table.centered-table th {
@@ -126,16 +128,21 @@ table th {
 .oversight-table {
   display: flex;
   justify-content: center;
+  min-width: 350px; /* Min size when screen adjusted */
+
 }
+
 
 .executive-table {
   display: flex;
   justify-content: center;
+  min-width: 400px; /* Min size when screen adjusted */
 }
 
 .program-table {
   display: flex;
   justify-content: center;
+  min-width: 400px; /* Min size when screen adjusted */
 }
 
 

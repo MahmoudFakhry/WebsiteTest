@@ -2,6 +2,21 @@
 <html>
 <head>
   <script>
+    function showContent(contentId) {
+    // Hide all content sections
+    const contentSections = document.getElementsByClassName("content-section");
+    for (let i = 0; i < contentSections.length; i++) {
+      contentSections[i].style.display = "none";
+    }
+  
+    // Show the selected content section
+    const selectedContent = document.getElementById(contentId);
+    selectedContent.style.display = "block";
+    }
+  </script>
+
+  </script>
+  <script>
     /* For image */
 
 .content-container {
@@ -286,19 +301,6 @@ nav ul li a:hover {
 </head>
 
 <body> 
-   <script>
-      function showContent(contentId) {
-    // Hide all content sections
-    const contentSections = document.getElementsByClassName("content-section");
-    for (let i = 0; i < contentSections.length; i++) {
-      contentSections[i].style.display = "none";
-    }
-  
-    // Show the selected content section
-    const selectedContent = document.getElementById(contentId);
-    selectedContent.style.display = "block";
-  }
-  </script>
   <header>
     <div class="image-container">
       <img src="IBC.png" alt="IBC Logo">

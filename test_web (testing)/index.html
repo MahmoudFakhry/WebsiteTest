@@ -1,8 +1,289 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+  <style>
+    /* For image */
+
+.content-container {
+  text-align: center;
+}
+
+.content-container img {
+  max-width: 50%; /* Adjust the size as needed */
+  height: auto;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.content-container p {
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.content-section {
+  display: none;
+}
+
+
+/* Add any desired styles to customize the appearance of your website */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+
+/* Buttons for names of people */
+
+.person-details {
+  display: none; /* Do not display text in buttons by default */
+}
+
+.person-details.show {
+      display: block;
+}
+
+.name-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 30%;
+  margin-right: 30%;
+
+  margin-top: 20px;
+}
+
+.name-list button {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+}
+
+
+.text-aligned {
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: left;
+}
+
+.text-important {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+
+table {
+  border-collapse: collapse; /* Collapse the borders */
+  margin-left: 27%;
+  margin-right: 27%;
+  text-align: left;
+}
+
+/* For all tables */
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table.oversight-table td, table.oversight-table th {
+    padding-right: 5vw;
+
+}
+
+table.executive-table td, table.executive-table th {
+    padding-right: 2vw;
+
+}
+
+table.program-table td, table.program-table th {
+    padding-right: 2.25vw; 
+    padding-left: 0.5vw; 
+}
+
+table.centered-table td, table.centered-table th {
+    padding-right: 52px; 
+}
+
+table td, table th {
+    padding: 5px;
+    border: none;
+}
+
+
+table th {
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.centered-table {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.oversight-table {
+  display: flex;
+  justify-content: center;
+  min-width: 350px; /* Min size when screen adjusted */
+
+}
+
+
+.executive-table {
+  display: flex;
+  justify-content: center;
+  min-width: 400px; /* Min size when screen adjusted */
+}
+
+.program-table {
+  display: flex;
+  justify-content: center;
+  min-width: 400px; /* Min size when screen adjusted */
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.line-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.line-container img {
+  max-height: 70px; 
+  max-width: 20%; /* Adjust the size as needed */
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.map-container img {
+  max-height: 600px; 
+  max-width: auto; /* Adjust the size as needed */
+}
+
+
+.small-image {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    height: 10px; /* Maintain the aspect ratio */
+
+}
+
+.image-container img {
+  max-width: 20%; /* Adjust the size as needed */
+  height: auto;
+}
+
+header {
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px; /* Increase the padding to make the buttons bigger */
+  font-size: 20px; /* Increase the font size */
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: #3c92d6; /* Change the color on hover */
+}
+
+.sub-menu {
+  display: none;
+}
+
+.section-content {
+  display: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.content-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px; /* Increase the text size */
+  background-color: transparent; /* Remove the grey background color */
+  border: none; /* Remove the button border */
+  color: #333; /* Set the button text color */
+  transition: background-color 0.3s;
+}
+
+.content-button:hover {
+  text-decoration: none;
+  color: #3c92d6; /* Change the color on hover */
+  background-color: #eeeeee;
+}
+
+.content-button:active {
+    background-color: #0072CE;
+    color: #333;
+}
+
+.content-button:focus { /* When button clicked, static blue background */
+    background-color: #87bce6;
+    text-decoration: none
+}
+
+
+#main-button-content {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#main-button h2 {
+  text-align: left; /* Align the "About Us" heading to the left */
+  text-decoration: underline; /* Add underline to "About Us" */
+  color: #3c92d6; /* Set the underline color */
+  margin-left: 25%; /* Move the "About Us" heading 25% from the left */
+}
+
+#logo-image {
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Contact us */
+
+.contact-details {
+    text-align: left;
+    padding-left: 33%;
+}
+  </style>
+</head> 
 <body>
   <header>
     <div class="image-container">

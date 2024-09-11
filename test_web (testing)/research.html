@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="preload" type="text/css" href="styles.css">
-<!--   <script src="script.js"></script>
-</head> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    #white-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      z-index: 9999;
+    }
+  </style>
+</head>
 <body>
+
+  <div id="white-image"></div>
+
   <header>
     <div class="image-container">
       <img src="IBC.png" alt="IBC Logo">
@@ -19,11 +34,17 @@
       </ul>
     </nav>
   </header>
-    <main>
-    <section id="main-button">
-      <h2>Research</h2>
-      </section>
-    </main>
+
+  <main>
+    <!-- Rest of your content -->
+  </main>
+
+  <script>
+    window.onload = function() {
+      const whiteImage = document.getElementById('white-image');
+      whiteImage.style.display = 'none';
+    };
+  </script>
 
 </body>
 </html>

@@ -281,20 +281,20 @@ nav ul li a:hover {
 .contact-details {
     text-align: left;
     padding-left: 33%;
-}
-
-function showContent(contentId) {
-  // Hide all content sections
-  const contentSections = document.getElementsByClassName("content-section");
-  for (let i = 0; i < contentSections.length; i++) {
-    contentSections[i].style.display = "none";
+}      
+  </script>
+  <script>
+      function showContent(contentId) {
+    // Hide all content sections
+    const contentSections = document.getElementsByClassName("content-section");
+    for (let i = 0; i < contentSections.length; i++) {
+      contentSections[i].style.display = "none";
+    }
+  
+    // Show the selected content section
+    const selectedContent = document.getElementById(contentId);
+    selectedContent.style.display = "block";
   }
-
-  // Show the selected content section
-  const selectedContent = document.getElementById(contentId);
-  selectedContent.style.display = "block";
-}
-      
   </script>
 </head>
 <body>
